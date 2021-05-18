@@ -1,0 +1,23 @@
+# Description: Collection of modular and reusable compiler and toolchain technologies
+# URL:         https://gcc.gnu.org
+# Maintainer:  ethanatchley2006 at protonmail gmail dot com
+# Depends on:  llvm musl binutils libstdc++ 
+# Section:     devel
+
+name=gcc
+version=11.1.0
+release=1
+source=("http://mirrors.concertpass.com/gcc/releases/gcc-11.1.0/gcc-11.1.0.tar.xz")
+
+build() {
+	
+	cd "SRC"/$name-$version
+
+	./configure --prefix=/usr	\
+	--target x86_64-linux-musl 	\
+	--disable-libstdcxx 		\
+	--enable-languages=c,c++	\
+
+	make
+	make DESTDIR="$PKG" install
+}
