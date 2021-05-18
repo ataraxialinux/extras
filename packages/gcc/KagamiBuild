@@ -16,6 +16,9 @@ build() {
 	
 	export acx_cv_cc_gcc_supports_ada=no
 	../configure --prefix=/usr	\
+        --with-mpfr                     \
+        --disable-multilib              \
+        --enable-vtable-verify          \
 	--disable-libstdcxx 		\
 	--enable-languages=c,c++	\
 
