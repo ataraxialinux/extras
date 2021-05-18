@@ -18,6 +18,8 @@ build() {
 	../configure --prefix=/usr	\
         --disable-multilib              \
         --enable-vtable-verify          \
+	--enable-bootstrap		\
+	--disable-libsanitizer		\
 	--enable-languages=c,c++	\
 
 	make
