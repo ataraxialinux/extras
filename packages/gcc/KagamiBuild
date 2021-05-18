@@ -1,7 +1,7 @@
 # Description: Collection of modular and reusable compiler and toolchain technologies
 # URL:         https://gcc.gnu.org
 # Maintainer:  ethanatchley2006 at protonmail gmail dot com
-# Depends on:  binutils gmp mpfr
+# Depends on:  binutils gmp mpc zstd
 # Section:     devel
 
 name=gcc
@@ -16,10 +16,8 @@ build() {
 	
 	export acx_cv_cc_gcc_supports_ada=no
 	../configure --prefix=/usr	\
-        --with-mpfr                     \
         --disable-multilib              \
         --enable-vtable-verify          \
-	--disable-libstdcxx 		\
 	--enable-languages=c,c++	\
 
 	make
