@@ -19,6 +19,8 @@ build() {
         --disable-multilib              \
         --enable-vtable-verify          \
 	--enable-bootstrap		\
+	--libdir=/usr/lib		\
+	--libexecdir=/usr/lib		\
 	--disable-libsanitizer		\
 	--enable-languages=c,c++	\
 
