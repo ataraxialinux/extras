@@ -1,7 +1,7 @@
 # Description: Collection of modular and reusable compiler and toolchain technologies
 # URL:         https://gcc.gnu.org
 # Maintainer:  ethanatchley2006 at protonmail gmail dot com
-# Depends on:  llvm musl binutils gmp mpfr
+# Depends on:  llvm musl binutils gmp mpfr pkg-config
 # Section:     devel
 
 name=gcc
